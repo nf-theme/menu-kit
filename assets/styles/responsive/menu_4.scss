@@ -1,0 +1,51 @@
+//menu mobile
+#primary_menu_responsive_4 {
+    .mobile_menu_primary {
+        .mean-bar {
+            background: none;
+            left: 0;
+            padding: 0;
+            position: absolute;
+            top: -1px;
+            z-index: 9;
+            max-width: 300px;
+            .meanmenu-reveal {
+                background: $brand-primary;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                right: auto !important;
+                left: 0;
+                top: 0;
+                height: 20px;
+                line-height: 20px;
+                width: 22px;
+                padding: 10px 11px 10px;
+            }
+            .mean-nav {
+                background: $brand-primary;
+                margin-top: 42px;
+                ul {
+                    li {
+                        a {
+                            padding-bottom: 11px;
+                            padding-top: 11px;
+                        }
+                        .sub-menu {
+                            li {
+                                a {
+                                    text-transform: none;
+                                }
+                            }
+                        }
+                        .mean-expand {
+                            height: 19px;
+                            line-height: 19px;
+                            &:hover {
+                                background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

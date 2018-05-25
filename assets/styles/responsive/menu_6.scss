@@ -1,0 +1,31 @@
+#primary_menu_responsive_6 {
+    .mobile_menu_primary {
+        .mean-bar {
+            width: 100%;
+            background: #65b1a7;
+            border-top: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            .meanmenu-reveal {
+                border: 1px solid #fff;
+                border-radius: 5px;
+                width: 20px;
+                height: 20px;
+                padding: 9px 13px 10px 13px;
+                top: 5.5px;
+                right: 10px !important;
+            }
+            .mean-nav {
+                background: #65b1a7;
+                ul {
+                    margin-top: 5px;
+                    li {
+                        background: #65b1a7;
+                        .mean-expand {
+                            background: #65b1a7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

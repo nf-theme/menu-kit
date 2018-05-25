@@ -1,0 +1,176 @@
+//giáo dục cộng đồng
+.menu_5{
+    background: #ea3535;
+    .menu_col{
+        .menu-main-menu-container{
+            .menu-primary{
+                padding-left: 0px;
+                list-style: none;
+                margin: 0px;
+
+                li{
+                    float: left;
+                    width: 140px;
+                    text-align: center;
+                    padding: 6px 0px 6px 0px;
+                    border-right: 1px solid #fff;
+                    position: relative;
+                    cursor: pointer;
+                    
+                    a{
+                        font-size: 15px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-family: 'Arial-Bold';
+                        text-decoration: none;
+                        padding: 10px 0px 9px 0px;
+                    }
+
+                    .sub-menu{
+                        padding-left: 0px;
+                        list-style: none;
+                        display: none;
+                        position: absolute;
+                        top: 37px;
+                        z-index: 99;
+                        width: 335px;
+                        background: #ea3535;
+                        animation: .7s ease 0s normal none 1 running fadeIn;
+                        z-index: 9999;
+
+                        li{
+                            text-align: left;
+                            width: 100%;
+                            padding-left: 20px;
+                            border-right: none;
+                            border-bottom: 1px solid #fff;
+                            position: relative;
+
+                            a{
+                                text-transform: unset;
+                            }
+
+                            .sub-menu{
+                                position: absolute;
+                                display: none;
+                                top: 0px;
+                                left: 336px;
+                                border-top: 1px solid #fff;
+                            }
+                        }
+
+                        li:hover{
+                            .sub-menu{
+                                display: block;
+                            }
+                        }
+
+                        li:last-child{
+                            border-bottom: none;
+                        }
+                    }
+                }
+
+                .current-menu-item{
+                    background: #b9282c;
+                }
+
+                li:last-child{
+                    border-right: none;
+                }
+
+                li:hover{
+                    background: #b9282c;
+
+                    .sub-menu{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-menu_en-container{
+        #menu-menu_en{
+            padding-left: 0px;
+            list-style: none;
+            margin: 0px;
+
+            li{
+                float: left;
+                width: 140px;
+                text-align: center;
+                padding: 6px 0px 6px 0px;
+                border-right: 1px solid #fff;
+                position: relative;
+                cursor: pointer;
+                
+                a{
+                    font-size: 15px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-family: 'Arial-Bold';
+                    text-decoration: none;
+                    padding: 10px 0px 9px 0px;
+                }
+
+                .sub-menu{
+                    padding-left: 0px;
+                    list-style: none;
+                    display: none;
+                    position: absolute;
+                    top: 37px;
+                    z-index: 99;
+                    width: 335px;
+                    background: #ea3535;
+                    animation: .7s ease 0s normal none 1 running fadeIn;
+                    z-index: 9999;
+
+                    li{
+                        text-align: left;
+                        width: 100%;
+                        padding-left: 20px;
+                        border-right: none;
+                        border-bottom: 1px solid #fff;
+                        position: relative;
+
+                        a{
+                            text-transform: unset;
+                        }
+
+                        .sub-menu{
+                            position: absolute;
+                            display: none;
+                            top: 0px;
+                            left: 336px;
+                            border-top: 1px solid #fff;
+                        }
+                    }
+
+                    li:hover{
+                        .sub-menu{
+                            display: block;
+                        }
+                    }
+
+                    li:last-child{
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .current-menu-item{
+                background: #b9282c;
+            }
+
+            li:hover{
+                background: #b9282c;
+
+                .sub-menu{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+//=======================================

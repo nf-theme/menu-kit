@@ -1,0 +1,155 @@
+/* @extend background-cover; */
+background-cover {
+    @include background-size( cover );
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+/* @extend background-contain; */
+background-contain {
+    @include background-size( contain );
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+}
+/* @extend display-flex; */
+display-flex {
+    display: flex;
+    display: -webkit-flex;
+}
+/* @extend list-type-ulli; */
+list-type-ulli {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+/* @extend msc-listing-row; */
+msc-listing-row {
+    .msc-listing {
+        @extend display-flex;
+        @include flex-wrap(wrap);
+    }
+}
+/* @extend box-shadow-four; */
+box-shadow-four {
+    @include box-shadow( 0 0 5px 0 $grey-light );
+}
+/* @extend box-shadow-two; */
+box-shadow-two {
+    @include box-shadow( 2px 2px 10px 0px $grey-light );
+}
+/* @extend bg-gradient-six; */
+bg-gradient-six {
+    @include background-gradient-six(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 55%, transparent 100%);
+}
+/* @extend bg-gradient-six-bottom; */
+bg-gradient-six-bottom {
+    @include background-gradient-six(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 55%, transparent 100%);
+}
+/* @extend read-more-gradient; */
+read-more-gradient {
+    color:  #fff;
+    font-size: 18px;
+    padding: 7px 45px 7px 25px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: relative;
+    @include border-radius( 40px );
+    // background-image: url('../images/arrow-next-step.png'), linear-gradient(to right, #ce1717 , #f0891a);
+    // background-image: url('../images/arrow-next-step.png'), -moz-linear-gradient(to right, #ce1717 , #f0891a);
+    // background-image: url('../images/arrow-next-step.png'), -webkit-linear-gradient(to right, #ce1717 , #f0891a);
+    // background-image: url('../images/arrow-next-step.png'), -o-linear-gradient(to right, #ce1717 , #f0891a);
+    // background-image: url('../images/arrow-next-step.png'), -ms-linear-gradient(to right, #ce1717 , #f0891a);
+
+    // background-repeat: no-repeat;
+    // background-position: right center;
+    // @include background-gradient-three(to right, #ce1717 , #f0891a);
+    // // &:after {
+    // //     background: #fff;
+    // //     content: "";
+    // //     position: absolute;
+    // //     display: inline-block;
+    // //     padding: 11px;
+    // //     top: 8px;
+    // //     right: 15px;
+    // //     @include border-radius( 50% );
+    // //     @include box-shadow( 2px 2px 10px 0px #bf5b16 );
+    // //     z-index: 1;
+    // // }
+    // // &:before {
+    // //     content: "";
+    // //     position: absolute;
+    // //     right: 23px;
+    // //     top: 15px;
+    // //     width: 8px;
+    // //     height: 8px;
+    // //     border-right: 3px solid $grey-bold;
+    // //     border-bottom: 3px solid $grey-bold;
+    // //     @include transform( rotate(-45deg) );
+    // //     z-index: 2;
+    // // }
+}
+/* @extend after-pagetitle; */
+after-pagetitle {
+    position: relative;
+    padding-bottom: 15px;
+    &:after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        background: $red-bold;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+
+/* @extend box-margin-top-am; */
+box-margin-top-am {
+    .content-page {
+        margin-top: -100px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media screen and (max-width: 575px) {
+        .content-page {
+            margin-top: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+
+/* @extend box-bg-full-z-index-am; */
+box-bg-full-z-index-am {
+    .page-post {
+        position: relative;
+        .page-post-content {
+            position: relative;
+            z-index: 2;
+            .item {
+                background: #ffffff;
+            }
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            background: #f3f3f3;
+            z-index: 1;
+            width: 1000%;
+            height: 100%;
+            @include transform( translateX(-50%) );
+        }
+        .page-desc {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}

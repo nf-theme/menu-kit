@@ -1,0 +1,29 @@
+#primary_menu_responsive_1{
+    .mobile_menu_primary {
+        .mean-bar {
+            background: #1f95ef;
+            .meanmenu-reveal {
+                left: 0px !important;
+                right: auto !important;
+            }
+            .mean-nav {
+                #menu-main-menu {
+                    li {
+                        background: #1f95ef;
+                        a.mean-expand:hover {
+                            background: #1f95ef;
+                        }
+                    }
+                }
+                #menu-main-menu-vi {
+                    li {
+                        background: #1f95ef;
+                        a.mean-expand:hover {
+                            background: #1f95ef;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
