@@ -8,10 +8,10 @@
     }],
     "autoload": {
         "psr-4": {
-            "NightFury\\ExtensionKit\\": "src/"
+            "Vicoders\\Menu\\": "src/"
         }
     },
     "require": {
-        "nf/core": ">=2.0"
+        "nf/option": "^1.0"
     }
 }
