@@ -21,27 +21,13 @@ composer require vicoders/menu-kit
     ],
 ```
 ##### Step 3: import css and js
->install package jquery.meanmenu
-```
-bower install jquery.meanmenu --save 
-```
->import js of jquery.meanmenu:
-```
-import 'jquery.meanmenu/jquery.meanmenu.js';
-```
->import css of jquery.meanmenu:
-```
-@import '~jquery.meanmenu/meanmenu.min.css';
-```
-
-
 >import js of package menu-kit in file (wp-content/themes/{name_theme}/resources/assets/scripts/app.js);
 ```
-import '../../../vendor/vicoders/menu-kit/assets/scripts/app.js'; 
+import '../../../vendor/vicoders/menu-kit/assets/dist/app.js';
 ```
 >import css of package menu-kit in file (wp-content/themes/{name_theme}/resources/assets/styles/app.scss);
 ```
-@import '../../../vendor/vicoders/menu-kit/assets/dist/app.css'; 
+@import '../../../vendor/vicoders/menu-kit/assets/dist/app.css';
 ```
 
 ##### Step 4: Add shortcode

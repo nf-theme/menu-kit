@@ -1,3 +1,5 @@
+// require('./jquery.meanmenu/jquery.meanmenu.js');
+
 $(document).ready(function() {
     //menu primary
     $('#primary_menu_responsive_1 .menu-main-menu-container').meanmenu({
