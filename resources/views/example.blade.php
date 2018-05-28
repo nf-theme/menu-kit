@@ -1,1 +1,0 @@
-That 's how we work with blade file :) {{$data}}

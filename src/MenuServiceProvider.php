@@ -5,11 +5,44 @@ namespace Vicoders\Menu;
 use Illuminate\Support\ServiceProvider;
 use NightFury\Option\Abstracts\Input;
 use NightFury\Option\Facades\ThemeOptionManager;
+use Vicoders\Menu\Facades\View;
 
 class MenuServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        //check exist folders
+        if (!is_dir(get_stylesheet_directory() . '/vendor/Vicoders/menu-kit/resources/cache')) {
+            mkdir(get_stylesheet_directory() . '/vendor/Vicoders/menu-kit/resources/cache', 0755);
+        }
+
+        add_shortcode('menu-vicoders', function ($args) {
+            $type_menu = get_option('menu');
+
+            $mobile_menu = '';
+
+            if($type_menu == 'menu_1'){
+                $mobile_menu = 'primary_menu_responsive_1';
+            }elseif ($type_menu == 'menu_2') {
+                $mobile_menu = 'primary_menu_responsive_2';
+            }elseif ($type_menu == 'menu_3') {
+                $mobile_menu = 'primary_menu_responsive_3';
+            }elseif ($type_menu == 'menu_4') {
+                $mobile_menu = 'primary_menu_responsive_4';
+            }elseif ($type_menu == 'menu_5') {
+                $mobile_menu = 'primary_menu_responsive_5';
+            }elseif ($type_menu == 'menu_6') {
+                $mobile_menu = 'primary_menu_responsive_6';
+            }
+
+            $data = [
+                'type_menu' => $type_menu,
+                'mobile_menu' => $mobile_menu,
+                'theme_location' => $args['theme_location'],
+            ];
+
+            return View::render('menu', $data);
+        });
         // All your actions that registered here will be bootstrapped
 
         // For example

@@ -1,6 +1,6 @@
 <?php
 
-namespace NightFury\ExtensionKit\Services;
+namespace Vicoders\Menu\Services;
 
 class View
 {
