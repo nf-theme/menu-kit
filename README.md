@@ -45,7 +45,7 @@ Example:
 ##### Step 5: Insert shortcode wherever you need
 > Very easy
 ```php
-do_shortcode("[menu-vicoders theme_location='main-menu'"]")
+do_shortcode("[menu-vicoders theme_location='main-menu']")
 ```
 
 ## Last step
