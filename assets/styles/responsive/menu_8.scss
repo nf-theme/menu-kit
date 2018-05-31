@@ -1,34 +1,35 @@
-//menu mobile
-#vicoders_menu_mobile_menu_3 {
-    .mobile_menu_primary {
+#vicoders_menu_mobile_menu_8 {
+    .mean-container {
         .mean-bar {
             background: none;
-            left: auto;
-            right: 0;
+            left: 0;
             padding: 0;
             position: absolute;
-            top: 0;
+            top: 2px;
             z-index: 9;
-            max-width: 300px;
-            min-height: 40px;
             .meanmenu-reveal {
-                background: #383838;
+                background: #333;
                 border: 1px solid rgba(255, 255, 255, 0.5);
-                left: auto;
+                right: 15px !important;
+                left: 0;
                 top: 0;
-                height: 16px;
+                height: 20px;
                 line-height: 20px;
-                width: 16px;
-                padding: 9px 11px 11px;
+                width: 28px;
+                padding: 10px 11px 10px;
             }
             .mean-nav {
-                background: #383838;
-                margin-top: 40px;
+                background: #333;
+                margin-top: 43px;
+                .sub-menu {
+                    // max-height: 170px;
+                    // overflow: auto;
+                }
                 ul {
                     li {
                         a {
-                            padding-bottom: 10px;
-                            padding-top: 10px;
+                            padding-bottom: 11px;
+                            padding-top: 11px;
                         }
                         .sub-menu {
                             li {
@@ -38,8 +39,10 @@
                             }
                         }
                         .mean-expand {
-                            height: 17px;
-                            line-height: 17px;
+                            height: 19px;
+                            right: 15px;
+                            line-height: 19px;
+                            border-right: 1px solid rgba(255, 255, 255, .4)!important;
                             &:hover {
                                 background: rgba(255, 255, 255, 0.3) none repeat scroll 0 0;
                             }

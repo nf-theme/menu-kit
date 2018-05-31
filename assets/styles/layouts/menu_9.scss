@@ -1,0 +1,195 @@
+.vicoders_menu_menu_9 {
+    background: $violet;
+    position: relative;
+    .row {
+        display: flex;
+        display: -webkit-flex;
+        @include align-items( stretch);
+        .fanpage {
+            display: flex;
+            display: -webkit-flex;
+            font-size: 13px;
+            color: #fff;
+            @include align-items( center);
+            text-transform: uppercase;
+            padding: 0 15px;
+            position: relative;
+            cursor: pointer;
+            font-weight: bold;
+            &::after {
+                background: #fff200 none repeat scroll 0 0;
+                bottom: 0;
+                content: "";
+                height: 2px;
+                left: 0;
+                max-width: 0;
+                position: absolute;
+                @include transition( all 0.2s ease 0s);
+                width: 100%;
+            }
+            &:hover {
+                max-width: 100%;
+                &:after {
+                    max-width: 100%;
+                }
+                section {
+                    &:first-child {
+                        @include transform( scale(1, 1));
+                    }
+                }
+            }
+            section {
+                &:first-child {
+                    background: hsla(300, 50%, 45%, 0.7) none repeat scroll 0 0;
+                    right: 0;
+                    position: absolute;
+                    top: 100%;
+                    z-index: 1000;
+                    @include transform( scale(1, 0));
+                    @include transform-origin( 0 0 0);
+                    @include transition( all 400ms ease 0s);
+                    .widget-title {
+                        display: none;
+                    }
+                    ul {
+                        display: flex;
+                        display: -webkit-flex;
+                        padding: 0 10px;
+                        li {
+                            margin: 10px 5px !important;
+                        }
+                        .ssi-facebook a {
+                            background: #4e71a8 !important;
+                        }
+
+                        .ssi-gplus a {
+                            background: #e3411f !important;
+                        }
+
+                        .ssi-instagram a {
+                            background: #666666 !important;
+                        }
+
+                        .ssi-twitter a {
+                            background: #1cb7eb !important;
+                        }
+
+                        .ssi-youtube a {
+                            background: #ca3737 !important;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+//tách menu ra vì khác class bên tiếng việt
+.vicoders_menu_menu_9{
+    .menu_col {
+        width: 100%;
+        > div {
+            > ul {
+                display: flex;
+                display: -webkit-flex;
+                @include justify-content( space-around );
+                > li {
+                    &:nth-child(3) {
+                        margin-right: 5%;
+                    }
+
+                    &:nth-child(4) {
+                        margin-left: 5%;
+                    }
+                }
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0px;
+                margin: 0px;
+                .current_page_item > a {
+                    color: $yellow;
+                }
+                .current-menu-parent > a {
+                    color: $yellow;
+                }
+
+                .sub-menu {
+                    background: hsla(300, 50%, 45%, 0.7) none repeat scroll 0 0;
+                    // display: none;
+                    left: 0;
+                    padding: 0;
+                    position: absolute;
+                    top: 100%;
+                    z-index: 1000;
+                    min-width: 100%;
+                    @include transform( scale(1, 0) );
+                    @include transform-origin( 0 0 0 );
+                    @include transition( all 400ms ease 0s );
+
+                    li {
+                        text-align: left;
+
+                        a {
+                            display: block;
+                            line-height: normal;
+                            padding: 10px 15px;
+                            text-align: left;
+                        }
+                    }
+                }
+
+                li {
+                    position: relative;
+                    // width: 100%;
+
+                    &:hover {
+                        > .sub-menu {
+                            @include transform( scale(1, 1) );
+                        }
+                        > a {
+                            background: transparent none repeat scroll 0 0;
+                            color: $yellow;
+
+                            &::after {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+
+
+                    a {
+                        font-size: 13px;
+                        font-weight: bold;
+                        line-height: 50px;
+                        position: relative;
+                        text-transform: uppercase;
+                        white-space: nowrap;
+                        display: inline-block;
+
+                        &::after {
+                            background: #fff200 none repeat scroll 0 0;
+                            bottom: 0;
+                            content: "";
+                            height: 2px;
+                            left: 0;
+                            max-width: 0;
+                            position: absolute;
+                            @include transition( all 0.2s ease 0s );
+                            width: 100%;
+                        }
+
+                        &:focus {
+                            background: transparent none repeat scroll 0 0;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

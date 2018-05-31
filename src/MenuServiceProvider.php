@@ -5,55 +5,20 @@ namespace Vicoders\Menu;
 use Illuminate\Support\ServiceProvider;
 use NightFury\Option\Abstracts\Input;
 use NightFury\Option\Facades\ThemeOptionManager;
-use Vicoders\Menu\Facades\View;
+use Vicoders\Menu\MenuManager;
 
 class MenuServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        //check exist folders
         if (!is_dir(get_stylesheet_directory() . '/vendor/Vicoders/menu-kit/resources/cache')) {
             mkdir(get_stylesheet_directory() . '/vendor/Vicoders/menu-kit/resources/cache', 0755);
         }
 
-        add_shortcode('menu-vicoders', function ($args) {
-            $type_menu = get_option('menu');
-
-            $mobile_menu = '';
-
-            if($type_menu == 'menu_1'){
-                $mobile_menu = 'primary_menu_responsive_1';
-            }elseif ($type_menu == 'menu_2') {
-                $mobile_menu = 'primary_menu_responsive_2';
-            }elseif ($type_menu == 'menu_3') {
-                $mobile_menu = 'primary_menu_responsive_3';
-            }elseif ($type_menu == 'menu_4') {
-                $mobile_menu = 'primary_menu_responsive_4';
-            }elseif ($type_menu == 'menu_5') {
-                $mobile_menu = 'primary_menu_responsive_5';
-            }elseif ($type_menu == 'menu_6') {
-                $mobile_menu = 'primary_menu_responsive_6';
-            }
-
-            $data = [
-                'type_menu' => $type_menu,
-                'mobile_menu' => $mobile_menu,
-                'theme_location' => $args['theme_location'],
-            ];
-
-            return View::render('menu', $data);
-        });
-        // All your actions that registered here will be bootstrapped
-
-        // For example
-        //
-        // $this->app->singleton('ThemeOption', function ($app) {
-        //     return new Manager;
-        // });
+        $this->setShortcode();
 
         if (is_admin()) {
-            $this->registerAdminPostAction();
-            $this->registerOptionPage(); // it require nf/theme-option package in template
+            $this->registerOptionPage();
         }
     }
 
@@ -88,49 +53,81 @@ class MenuServiceProvider extends ServiceProvider
         });
     }
 
+    public function setShortcode()
+    {
+        add_shortcode('menu-vicoders', function ($args) {
+            if (empty($args['theme_location'])) {
+                $args['theme_location'] = 'main-menu';
+            }
+            $type_menu = get_option($args['name_menu']);
+            // echo $type_menu;
+            $menu      = new MenuManager($type_menu, $args['theme_location']);
+            return $menu->renderHTML();
+        });
+    }
+
     public function registerOptionPage()
     {
-        \NightFury\Option\Facades\ThemeOptionManager::add([
-            'name'   => 'General',
-            'fields' => [
-                [
-                    'label'   => 'Select',
-                    'name'    => 'menu',
-                    'type'    => Input::SELECT,
-                    'options' => [
-                        [
-                            'value'    => 'menu_1',
-                            'label'    => 'Menu 1',
-                            'selected' => true,
-                        ],
-                        [
-                            'value'    => 'menu_2',
-                            'label'    => 'Menu 2',
-                            'selected' => false,
-                        ],
-                        [
-                            'value'    => 'menu_3',
-                            'label'    => 'Menu 3',
-                            'selected' => false,
-                        ],
-                        [
-                            'value'    => 'menu_4',
-                            'label'    => 'Menu 4',
-                            'selected' => false,
-                        ],
-                        [
-                            'value'    => 'menu_5',
-                            'label'    => 'Menu 5',
-                            'selected' => false,
-                        ],
-                        [
-                            'value'    => 'menu_6',
-                            'label'    => 'Menu 6',
-                            'selected' => false,
-                        ],
-                    ],
-                ],
+        $menus   = get_terms('nav_menu');
+        $options = [
+            [
+                'value'    => 'menu_1',
+                'label'    => 'Menu 1',
+                'selected' => true,
             ],
-        ]);
+            [
+                'value'    => 'menu_2',
+                'label'    => 'Menu 2',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_3',
+                'label'    => 'Menu 3',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_4',
+                'label'    => 'Menu 4',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_5',
+                'label'    => 'Menu 5',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_6',
+                'label'    => 'Menu 6',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_7',
+                'label'    => 'Menu 7',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_8',
+                'label'    => 'Menu 8',
+                'selected' => false,
+            ],
+            [
+                'value'    => 'menu_9',
+                'label'    => 'Menu 9',
+                'selected' => false,
+            ],
+        ];
+        foreach ($menus as $item) {
+            $data['field'][] = [
+                'label'   => $item->name,
+                'name'    => $item->name,
+                'type'    => Input::SELECT,
+                'options' => $options,
+            ];
+        }
+        \NightFury\Option\Facades\ThemeOptionManager::add(
+            [
+                'name'   => 'Setting Menu',
+                'fields' => $data['field'],
+            ]);
     }
 }

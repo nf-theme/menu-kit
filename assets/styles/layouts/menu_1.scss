@@ -1,4 +1,4 @@
-.menu_1 {
+.vicoders_menu_menu_1 {
     background: #1f95ef;
     position: relative;
     .menu_col {
@@ -7,96 +7,94 @@
         .icon_search_mobile {
             display: none;
         }
-        .menu-main-menu-container {
-            .menu-primary {
-                padding-left: 0px;
-                list-style: none;
-                margin-bottom: 0px;
+        ul.menu-primary {
+            padding-left: 0px;
+            list-style: none;
+            margin-bottom: 0px;
 
-                li {
-                    float: left;
-                    position: relative;
-                    padding: 8px 0px 8px 0px;
-                    a {
-                        color: #fff;
-                        font-size: 14px;
-                        text-transform: uppercase;
-                        padding: 11px 18px 10px 18px;
-                        text-decoration: none;
-                    }
-
-                    .sub-menu {
-                        padding-left: 0px;
-                        list-style: none;
-                        margin-bottom: 0px;
-                        transform: scale(1, 0);
-                        -moz-transform: scale(1, 0);
-                        -webkit-transform: scale(1, 0);
-                        -o-transform: scale(1, 0);
-                        -ms-transform: scale(1, 0);
-                        transform-origin: 0 0 0;
-                        -moz-transform-origin: 0 0 0;
-                        -webkit-transform-origin: 0 0 0;
-                        -o-transform-origin: 0 0 0;
-                        -ms-transform-origin: 0 0 0;
-                        transition: all 400ms ease 0s;
-                        -moz-transition: all 400ms ease 0s;
-                        -webkit-transition: all 400ms ease 0s;
-                        -o-transition: all 400ms ease 0s;
-                        -ms-transition: all 400ms ease 0s;
-                        position: absolute;
-                        z-index: 2222;
-                        min-width: 200%;
-                        background: #fff;
-                        top: 40px;
-                        li {
-                            float: none;
-                            padding: 0px;
-                            a {
-                                color: #1564a0;
-                                text-decoration: none;
-                                display: block;
-                                padding: 7px 0px 7px 20px;
-                            }
-                        }
-
-                        li:hover {
-                            background: #1f95ef;
-                        }
-                    }
+            li {
+                float: left;
+                position: relative;
+                padding: 8px 0px 8px 0px;
+                a {
+                    color: #fff;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    padding: 11px 18px 10px 18px;
+                    text-decoration: none;
                 }
 
-                li.current-menu-item {
-                    background: #e6e6e6;
-                }
-
-                li:hover {
-                    background: #e6e6e6;
-                    position: relative;
-
-                    a {
-                        color: #0094e0;
-                    }
-                    .sub-menu {
-                        display: block;
-                        transform: scale(1, 1);
-                        -moz-transform: scale(1, 1);
-                        -webkit-transform: scale(1, 1);
-                        -o-transform: scale(1, 1);
-                        -ms-transform: scale(1, 1);
-
-                        li {
-                            a {
-                                color: #1564a0;
-                                text-decoration: none;
-                                font-size: 14px;
-                            }
+                .sub-menu {
+                    padding-left: 0px;
+                    list-style: none;
+                    margin-bottom: 0px;
+                    transform: scale(1, 0);
+                    -moz-transform: scale(1, 0);
+                    -webkit-transform: scale(1, 0);
+                    -o-transform: scale(1, 0);
+                    -ms-transform: scale(1, 0);
+                    transform-origin: 0 0 0;
+                    -moz-transform-origin: 0 0 0;
+                    -webkit-transform-origin: 0 0 0;
+                    -o-transform-origin: 0 0 0;
+                    -ms-transform-origin: 0 0 0;
+                    transition: all 400ms ease 0s;
+                    -moz-transition: all 400ms ease 0s;
+                    -webkit-transition: all 400ms ease 0s;
+                    -o-transition: all 400ms ease 0s;
+                    -ms-transition: all 400ms ease 0s;
+                    position: absolute;
+                    z-index: 2222;
+                    min-width: 200%;
+                    background: #fff;
+                    top: 40px;
+                    li {
+                        float: none;
+                        padding: 0px;
+                        a {
+                            color: #1564a0;
+                            text-decoration: none;
+                            display: block;
+                            padding: 7px 0px 7px 20px;
                         }
+                    }
 
-                        li:hover {
-                            a {
-                                color: #fff; // padding: 7px 0px 7px 0px;
-                            }
+                    li:hover {
+                        background: #1f95ef;
+                    }
+                }
+            }
+
+            li.current-menu-item {
+                background: #e6e6e6;
+            }
+
+            li:hover {
+                background: #e6e6e6;
+                position: relative;
+
+                a {
+                    color: #0094e0;
+                }
+                .sub-menu {
+                    display: block;
+                    transform: scale(1, 1);
+                    -moz-transform: scale(1, 1);
+                    -webkit-transform: scale(1, 1);
+                    -o-transform: scale(1, 1);
+                    -ms-transform: scale(1, 1);
+
+                    li {
+                        a {
+                            color: #1564a0;
+                            text-decoration: none;
+                            font-size: 14px;
+                        }
+                    }
+
+                    li:hover {
+                        a {
+                            color: #fff; // padding: 7px 0px 7px 0px;
                         }
                     }
                 }

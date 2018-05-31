@@ -1,4 +1,4 @@
-<nav class="{{ $type_menu }}" id="{{ $mobile_menu }}">
+<nav class="{{ $menu_class }}" id="{{ $mobile_menu_class }}">
     <div class="container">
         <div class="row">
             <div class="col-md-12 menu_col">
