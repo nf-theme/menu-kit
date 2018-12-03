@@ -1,18 +1,18 @@
 <?php
 
-namespace Vicoders\Menu;
+namespace NF\Menu;
 
 use Illuminate\Support\ServiceProvider;
 use NightFury\Option\Abstracts\Input;
 use NightFury\Option\Facades\ThemeOptionManager;
-use Vicoders\Menu\MenuManager;
+use \Menu\MenuManager;
 
 class MenuServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        if (!is_dir(get_stylesheet_directory() . '/vendor/Vicoders/menu-kit/resources/cache')) {
-            mkdir(get_stylesheet_directory() . '/vendor/Vicoders/menu-kit/resources/cache', 0755);
+        if (!is_dir(get_stylesheet_directory() . '/vendor/nf/menu-kit/resources/cache')) {
+            mkdir(get_stylesheet_directory() . '/vendor/nf/menu-kit/resources/cache', 0755);
         }
 
         $this->setShortcode();
@@ -55,7 +55,7 @@ class MenuServiceProvider extends ServiceProvider
 
     public function setShortcode()
     {
-        add_shortcode('menu-vicoders', function ($args) {
+        add_shortcode('menu-kit', function ($args) {
             if (empty($args['theme_location'])) {
                 $args['theme_location'] = 'main-menu';
             }

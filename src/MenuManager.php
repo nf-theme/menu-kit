@@ -1,8 +1,8 @@
 <?php
 
-namespace Vicoders\Menu;
+namespace NF\Menu;
 
-use Vicoders\Menu\Facades\View;
+use NF\Menu\Facades\View;
 
 class MenuManager
 {

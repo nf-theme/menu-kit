@@ -1,6 +1,6 @@
 <?php
 
-namespace Vicoders\Menu\Services;
+namespace NF\Menu\Services;
 
 class View
 {

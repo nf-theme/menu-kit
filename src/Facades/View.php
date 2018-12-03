@@ -1,6 +1,6 @@
 <?php
 
-namespace Vicoders\Menu\Facades;
+namespace NF\Menu\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -8,6 +8,6 @@ class View extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return new \Vicoders\Menu\Services\View;
+        return new \NF\Menu\Services\View;
     }
 }

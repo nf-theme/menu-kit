@@ -1,17 +1,19 @@
 {
-    "name": "vicoders/menu-kit",
-    "description": "Extension kit for NF Theme",
-    "license": "MIT",
-    "authors": [{
-        "name": "Hieupv",
-        "email": "hieupv@codersvn.com"
-    }],
-    "autoload": {
-        "psr-4": {
-            "Vicoders\\Menu\\": "src/"
-        }
-    },
-    "require": {
-        "nf/option": "^1.0"
+  "name": "nf/menu-kit",
+  "description": "Menu Collection",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hieupv",
+      "email": "hieupv@codersvn.com"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "NF\\Menu\\": "src/"
+    }
+  },
+  "require": {
+    "nf/option": "*"
+  }
 }
